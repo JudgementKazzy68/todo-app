@@ -1,0 +1,24 @@
+.input-field {
+  box-sizing: border-box;
+  border: 8px solid orange;
+  border-radius: 10px;
+  height: 48px;
+  width: 256px;
+}
+
+.list-main {
+  list-style: none;
+  padding: 0px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: gold;
+  border-radius: 10px;
+  height: 48px;
+  width: 256px;
+  margin-top: 16px;
+  gap: 8px;
+}
