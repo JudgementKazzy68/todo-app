@@ -22,3 +22,8 @@
   margin-top: 16px;
   gap: 8px;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: darkgray;
+}

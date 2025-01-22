@@ -2,18 +2,31 @@
 
 const listMain = document.querySelector(".list-main");
 const inputField = document.querySelector(".input-field");
+let listItems = document.getElementsByTagName("li");
+let checkBoxes = document.getElementsByClassName("complete-task");
 
 function addItem() {
   const li = document.createElement("li");
   const nav = document.createElement("nav");
   const checkBox = document.createElement("input");
+  const div = document.createElement("div");
   listMain.appendChild(li);
   li.appendChild(nav);
+  nav.classList.add("list-item");
   nav.appendChild(checkBox);
   checkBox.type = "checkbox";
-  nav.appendChild(document.createTextNode(inputField.value));
+  checkBox.classList.add("complete-task");
+  checkBox.addEventListener("click", function () {
+    for (let i = 0; i < checkBoxes.length; i++) {
+      if (checkBoxes[i].checked === true) {
+        listItems[i].remove();
+      }
+    }
+  });
+  nav.appendChild(div);
+  div.textContent = inputField.value;
   inputField.value = "";
-  nav.classList.add("list-item");
+  console.log(checkBoxes);
 }
 
 inputField.addEventListener("keydown", function (e) {
