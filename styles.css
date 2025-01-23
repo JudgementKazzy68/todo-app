@@ -1,9 +1,25 @@
+body {
+  background-color: #328ba8;
+  font-family: "Sofia", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  color: rgb(175, 149, 115);
+}
+
+.main-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .input-field {
   box-sizing: border-box;
-  border: 8px solid orange;
+  border: 8px solid #32a871;
   border-radius: 10px;
   height: 48px;
-  width: 256px;
+  width: 400px;
 }
 
 .list-main {
@@ -15,15 +31,28 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  background-color: gold;
+  background-color: #32a871;
   border-radius: 10px;
   height: 48px;
-  width: 256px;
+  width: 400px;
   margin-top: 16px;
   gap: 8px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .completed {
   text-decoration: line-through;
-  color: darkgray;
+  color: darkslategray;
+}
+
+.btn-delete {
+  justify-self: flex-end;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  margin-right: 8px;
+  margin-left: auto;
+  font-size: 16px;
 }
